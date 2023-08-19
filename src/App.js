@@ -1,6 +1,10 @@
+import CostItem from './components/CostItem'
 function App() {
   return (
-    <h1>Start of learning React!</h1>
+    <>
+      <CostItem/>
+    </>
+    
   )
 }
 export default App
