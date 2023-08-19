@@ -1,8 +1,6 @@
 import './CostItem.css'
-function CostItem() {
-  const date = new Date()
-  const title = 'Refrigerator'
-  const sum = '798'
+function CostItem({ data }) {
+  const { date, title, sum } = data
   return (
     <div className="cost-item">
       <div className='cost-item__date'>{date.toDateString()}</div>
