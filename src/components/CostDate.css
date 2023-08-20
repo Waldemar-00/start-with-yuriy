@@ -1,0 +1,8 @@
+.cost-item__date {
+  border-radius: 12px;
+  padding: 0.5rem 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #fefae1;
+  background-color: rgb(224 166 79 / 90%);
+}

@@ -1,17 +1,27 @@
-import CostItem from './components/CostItem'
+import Costs from './components/Costs'
 function App() {
-  const costData = [
-    {
-      date: new Date(),
-      title: 'Refrigerator',
-      sum: '798'
-    }
-  ]
+  const purchasesData =
+    [
+      {
+        date: new Date(),
+        title: 'Refrigerator',
+        sum: '798'
+      },
+      {
+        date: new Date(),
+        title: 'Smartphone',
+        sum: '780'
+      },
+      {
+        date: new Date(),
+        title: 'Bookcase',
+        sum: '480'
+      }
+    ]
   return (
     <>
-      <CostItem data={costData[0]}/>
+      <Costs purchases={purchasesData}/>
     </>
-    
   )
 }
 export default App

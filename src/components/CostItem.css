@@ -9,13 +9,6 @@
   border-radius: 12px;
   /* box-shadow: 0 2px 7px rgba(0, 0, 0, 0.25); */
 }
-.cost-item__date {
-  border-radius: 12px;
-  padding: 0.5rem 1.5rem;
-  font-size: 1.25rem;
-  color: #fefae1;
-  background-color: rgb(224 166 79 / 90%)
-}
 .cost-item__decription {
   display: flex;
   flex-flow: row nowrap;/* flex-direction: column-reverse; *//* flex-wrap: nowrap; */
@@ -37,18 +30,3 @@
   padding: 0.5rem 1.5rem;
   border-radius: 12px;  
 }
-/* @media (max-width: 580px) { */
-  /* .cost-item__description{ */
-    /* flex-flow: column-reverse nowrap; */
-  /* } */
-  /* .cost-item__description h2 { */
-    /* font-size: 1rem; */
-  /* } */
-  /* .cost-item__sum { */
-    /* font-size: 1rem; */
-    /* padding: 0.5rem; */
-  /* } */
-  /* .cost-item__date { */
-    /* font-size: 1rem; */
-  /* } */
-/* } */

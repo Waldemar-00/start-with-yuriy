@@ -1,14 +1,17 @@
 import './CostItem.css'
-function CostItem({ data }) {
-  const { date, title, sum } = data
+import CostDate from './CostDate'
+function CostItem({buy}) {
+  const {date, title, sum} = buy
   return (
-    <div className="cost-item">
-      <div className='cost-item__date'>{date.toDateString()}</div>
-      <div className='cost-item__decription'>
-        <h2>{title}</h2>
-        <div className='cost-item__sum'>${sum}</div>
+    <>
+      <div className="cost-item">
+        <CostDate data={date} />
+        <div className='cost-item__decription'>
+          <h2>{title}</h2>
+          <div className='cost-item__sum'>${sum}</div>
+        </div>
       </div>
-    </div>
+    </>
   )
 }
 export default CostItem
