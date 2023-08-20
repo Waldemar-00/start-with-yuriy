@@ -6,7 +6,6 @@
   padding: 0.5rem;
   margin: 1rem 0;
   background-color: #bd8025;
-  border-radius: 12px;
   /* box-shadow: 0 2px 7px rgba(0, 0, 0, 0.25); */
 }
 .cost-item__decription {
@@ -26,7 +25,7 @@
 .cost-item__sum {
   font-weight: bold;
   color: #fefae1;
-  background-color: #2a846e;
+  background-color: #16886b;
   padding: 0.5rem 1.5rem;
   border-radius: 12px;  
 }
