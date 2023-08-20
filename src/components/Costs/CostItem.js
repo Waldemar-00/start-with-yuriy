@@ -1,6 +1,6 @@
 import './CostItem.css'
 import CostDate from './CostDate'
-import Card from './Card'
+import Card from '../UI/Card'
 function CostItem({buy}) {
   const {date, title, sum} = buy
   return (
