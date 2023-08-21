@@ -1,4 +1,6 @@
 import Costs from './components/Costs/Costs'
+
+import NewCost from './components/NewCost/NewCost'
 function App() {
   const purchasesData =
     [
@@ -20,6 +22,7 @@ function App() {
     ]
   return (
     <>
+      <NewCost/>
       <Costs purchases={purchasesData}/>
     </>
   )

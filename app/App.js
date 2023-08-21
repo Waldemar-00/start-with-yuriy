@@ -1,6 +1,7 @@
-import React, { useState } from "react";
-import NewCost from "./components/NewCost/NewCost";
-import Costs from "./components/Costs/Costs";
+import React, { useState } from "react"
+import NewCost from "./components/NewCost/NewCost"
+import Costs from "./components/Costs/Costs"
+
 
 const INITIAL_COSTS = [
   {
