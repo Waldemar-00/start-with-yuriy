@@ -1,38 +1,28 @@
 import {useState} from 'react'
 import './CostForm.css'
 function CostForm() {
-  const [userInput, setUserInput] = useState({
-    title: '',
-    sum: '',
-    date: ''
-  })
+  const [title, setTitle] = useState('')
+  const [sum, setSum] = useState('')
+  const [date, setDate] = useState('')
   function changeTitleHandler(e) {
-    setUserInput((previousState) => {
-      return { ...previousState, title: e.target.value}
-    })
+    setTitle(e.target.value)
   }
   function changeSumHandler(e) {
-    setUserInput((previousState) => {
-      return {...previousState, sum: e.target.value}
-    })
+    setSum(e.target.value)
   }
   function changeDateHandler(e) {
-    setUserInput((previousState) => {
-      return { ...previousState, date: e.target.value}
-    })
+    setDate(e.target.value)
   }
   function submitHandler(e) {
     e.preventDefault()
     const handlerData = {
-      title: userInput.title,
-      sum: userInput.sum,
-      date: new Date(userInput.date)
+      title: title,
+      sum: sum,
+      date: new Date(date)
     }
-    setUserInput({
-      title: '',
-      sum: '',
-      date: ''
-    })
+    setTitle('')
+    setSum('')
+    setDate('')
     return handlerData
   }
   return (
@@ -44,7 +34,7 @@ function CostForm() {
             type="text" 
             name='text' 
             id='title' 
-            value={userInput.title} 
+            value={title} 
             onChange={changeTitleHandler}
           />
         </div>
@@ -55,7 +45,7 @@ function CostForm() {
             min='0.01' step='0.01'
             name='sum'
             id='sum'
-            value={userInput.sum}
+            value={sum}
             onChange={changeSumHandler}
           />
         </div>
@@ -65,7 +55,7 @@ function CostForm() {
             type="date" 
             name='date'
             min='2022-01-01' max='2033-01-01'
-            value={userInput.date}
+            value={date}
             id='date'
             onChange={changeDateHandler}
           />
