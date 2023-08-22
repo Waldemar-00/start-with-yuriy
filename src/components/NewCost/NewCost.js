@@ -4,7 +4,7 @@ function NewCost() {
   return (
     <div className="new-cost">
       <CostForm />
-      <button>Submit</button>
+      <button>Cancel</button>
     </div>
   )
 }

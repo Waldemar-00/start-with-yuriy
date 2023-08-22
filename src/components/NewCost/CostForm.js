@@ -21,8 +21,17 @@ function CostForm() {
       return { ...previousState, date: e.target.value}
     })
   }
+  function submitHandler(e) {
+    e.preventDefault()
+    const handlerData = {
+      title: userInput.title,
+      sum: userInput.sum,
+      date: new Date(userInput.date)
+    }
+    return handlerData
+  }
   return (
-    <form>
+    <form onSubmit={submitHandler}>
       <div className="new-cost__controls">
         <div className="new-cost__control">
           <label htmlFor="title">Title</label>
