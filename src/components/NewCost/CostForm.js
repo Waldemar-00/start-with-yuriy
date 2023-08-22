@@ -7,18 +7,18 @@ function CostForm() {
     date: ''
   })
   function changeTitleHandler(e) {
-    setUserInput({
-      ...userInput, title: e.target.value
+    setUserInput((previousState) => {
+      return { ...previousState, title: e.target.value}
     })
   }
   function changeSumHandler(e) {
-    setUserInput({
-      ...userInput, sum: e.target.value
+    setUserInput((previousState) => {
+      return {...previousState, sum: e.target.value}
     })
   }
   function changeDateHandler(e) {
-    setUserInput({
-      ...userInput, date: e.target.value
+    setUserInput((previousState) => {
+      return { ...previousState, date: e.target.value}
     })
   }
   return (
