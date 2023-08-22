@@ -28,6 +28,11 @@ function CostForm() {
       sum: userInput.sum,
       date: new Date(userInput.date)
     }
+    setUserInput({
+      title: '',
+      sum: '',
+      date: ''
+    })
     return handlerData
   }
   return (
