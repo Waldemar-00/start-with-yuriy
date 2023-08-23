@@ -10,14 +10,12 @@ function Costs({ purchases }) {
     setYear(eventYear)
   }
   return (
-    <>
-      <CostFilter onChangeYear={onChangeYear} year={year}/>
       <Card className={'costs'}>
+        <CostFilter onChangeYear={onChangeYear} year={year} />
         <CostItem buy={one} />
         <CostItem buy={two} />
         <CostItem buy={three} />
       </Card>
-    </>
   )
 
 }
