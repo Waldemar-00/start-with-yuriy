@@ -1,6 +1,6 @@
 import {useState} from 'react'
 import './CostForm.css'
-function CostForm() {
+function CostForm({ onHandlerData }) {
   const [title, setTitle] = useState('')
   const [sum, setSum] = useState('')
   const [date, setDate] = useState('')
@@ -16,14 +16,14 @@ function CostForm() {
   function submitHandler(e) {
     e.preventDefault()
     const handlerData = {
+      date: new Date(date),
       title: title,
-      sum: sum,
-      date: new Date(date)
+      sum: sum
     }
     setTitle('')
     setSum('')
     setDate('')
-    return handlerData
+    onHandlerData(handlerData) 
   }
   return (
     <form onSubmit={submitHandler}>

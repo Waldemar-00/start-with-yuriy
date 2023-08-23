@@ -20,9 +20,13 @@ function App() {
         sum: '480'
       }
     ]
+  function getHandlerData(handlerData) {
+    purchasesData.push(handlerData)
+    console.log(purchasesData)
+  }
   return (
     <>
-      <NewCost/>
+      <NewCost onHandlerData={getHandlerData}/>
       <Costs purchases={purchasesData}/>
     </>
   )
