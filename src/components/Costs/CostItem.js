@@ -1,11 +1,11 @@
 import './CostItem.css'
 import CostDate from './CostDate'
 import Card from '../UI/Card'
-function CostItem({buy}) {
-  const {date, title, sum} = buy
+function CostItem({ obj }) {
+  const {date, title, sum, id} = obj
   return (
     <>
-      <Card className={"cost-item"}>
+      <Card className={"cost-item"} id={id}>
         <CostDate data={date} />
         <div className='cost-item__decription'>
           <h2>{title}</h2>

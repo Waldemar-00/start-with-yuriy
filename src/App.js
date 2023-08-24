@@ -1,22 +1,26 @@
 import Costs from './components/Costs/Costs'
 import NewCost from './components/NewCost/NewCost'
+import { v4 } from 'uuid'
 function App() {
   const purchasesData =
     [
       {
         date: new Date(),
         title: 'Refrigerator',
-        sum: '798'
+        sum: '798',
+        id: v4()
       },
       {
         date: new Date(),
         title: 'Smartphone',
-        sum: '780'
+        sum: '780',
+        id: v4()
       },
       {
         date: new Date(),
         title: 'Bookcase',
-        sum: '480'
+        sum: '480',
+        id: v4()
       }
     ]
   function getHandlerData(handlerData) {

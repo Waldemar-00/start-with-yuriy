@@ -1,4 +1,4 @@
 import './Card.css'
-export default function Card(props) {
-  return <div className={'card ' + props.className}>{props.children}</div>
+export default function Card({ className, children, id }) {
+  return <div className={'card ' + className} id={id}> {children} </div>
 }
