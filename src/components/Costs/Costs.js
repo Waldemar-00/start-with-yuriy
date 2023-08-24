@@ -9,10 +9,8 @@ function Costs({ purchases }) {
     setYear(eventYear)
   }
   const filterByYear = purchases.filter(obj => {
-    console.log(obj.date.getFullYear())
     return obj.date.getFullYear() === parseInt(year, 10)
   })
-  console.log(filterByYear)
   return (
     <Card className={'costs'}>
       <CostFilter onChangeYear={onChangeYear} year={year} />
