@@ -12,7 +12,7 @@ function Costs({ purchases }) {
     <Card className={'costs'}>
       <CostFilter onChangeYear={onChangeYear} year={year} />
       {purchases.map((obj, index) => {
-        return <CostItem obj={obj}/>
+        return <CostItem obj={obj} key={purchases[index].id}/>
       })}
     </Card>
   )
