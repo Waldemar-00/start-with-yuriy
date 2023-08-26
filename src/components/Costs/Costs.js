@@ -15,9 +15,8 @@ function Costs({ purchases }) {
   return (
     <Card className={'costs'}>
       <CostFilter onChangeYear={onChangeYear} year={year} />
-      {filterByYear.length === 0 ?
-        <div className='card cost-item'>No expenses this year</div> : 
-        filterByYear.map((obj, index) => {
+      {filterByYear.length === 0 && <div className='card cost-item'>No expenses this year</div>}
+      {filterByYear.length > 0 && filterByYear.map((obj, index) => {
           return <CostItem obj={obj} key={purchases[index].id}/>
         })
       }
