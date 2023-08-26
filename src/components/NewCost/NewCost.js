@@ -7,7 +7,6 @@ function NewCost({ onHandlerData }) {
   return (
     <div className="new-cost">
       <CostForm onHandlerData={getHandlerData} />
-      <button>Cancel</button>
     </div>
   )
 }
