@@ -54,7 +54,7 @@ function CostForm({ onHandlerData }) {
           <input 
             type="date" 
             name='date'
-            min='2022-01-01' max='2033-01-01'
+            min='2022-01-01' max='2026-01-01'
             value={date}
             id='date'
             onChange={changeDateHandler}

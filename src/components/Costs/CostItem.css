@@ -6,6 +6,9 @@
   padding: 0.5rem;
   margin: 1rem 0;
   background-color: #bd8025;
+  color: #FEFAE1;
+  font-weight: bold;
+  font-size: 1.25rem;
   /* box-shadow: 0 2px 7px rgba(0, 0, 0, 0.25); */
 }
 .cost-item__decription {
