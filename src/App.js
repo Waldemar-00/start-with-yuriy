@@ -7,7 +7,7 @@ const purchasesData =
   [
     { date: new Date(), title: 'Refrigerator', sum: '798', id: v4() },
     {date: new Date(),title: 'Smartphone',sum: '780',id: v4()},
-    {date: new Date(),title: 'Bookcase',sum: '480',id: v4()}
+    {date: new Date('2025-03-21'),title: 'Bookcase',sum: '480',id: v4()}
   ]
 function App() {
   const [purchases, setPurchases] = useState(purchasesData)
