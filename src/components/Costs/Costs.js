@@ -12,14 +12,16 @@ function Costs({ purchases }) {
   const filterByYear = purchases.filter(obj => {
     return obj.date.getFullYear() === parseInt(year, 10)
   })
+  let content = <div className='card cost-item'>No expenses this year</div>
+  if (filterByYear.length > 0) {
+    content = filterByYear.length > 0 && filterByYear.map((obj, index) => {
+      return <CostItem obj={obj} key={purchases[index].id} />
+    })
+  }
   return (
     <Card className={'costs'}>
       <CostFilter onChangeYear={onChangeYear} year={year} />
-      {filterByYear.length === 0 && <div className='card cost-item'>No expenses this year</div>}
-      {filterByYear.length > 0 && filterByYear.map((obj, index) => {
-          return <CostItem obj={obj} key={purchases[index].id}/>
-        })
-      }
+      {content}
     </Card>
   )
 
