@@ -1,6 +1,7 @@
 import {useState} from 'react'
 import './CostForm.css'
 import CostFormInputs from './CostFormInputs'
+import CostFormButtons from './CostFormButtons'
 function CostForm({ onHandlerData }) {
   const [title, setTitle] = useState('')
   const [sum, setSum] = useState('')
@@ -34,7 +35,6 @@ function CostForm({ onHandlerData }) {
     <form onSubmit={submitHandler} className="new-cost__controls">
       {
         unform && (
-          <>
             <CostFormInputs
               changeTitleHandler={changeTitleHandler}
               title={title}
@@ -43,21 +43,12 @@ function CostForm({ onHandlerData }) {
               date={date}
               changeDateHandler={changeDateHandler}
             />
-          </>
         )
       }
-      <div className='buttons'>
-        <div className="new-cost__actions">
-          <button type='submit' onClick={onButtonHandler}>Added Expense</button>
-        </div>
-        {
-          unform && (
-            <div className="cancel">
-              <button onClick={onButtonHandler}>Cancel</button>
-            </div>
-          )
-        }
-      </div>
+      <CostFormButtons
+        onButtonHandler={onButtonHandler}
+        unform={unform}
+      />
     </form>
   )
 }
