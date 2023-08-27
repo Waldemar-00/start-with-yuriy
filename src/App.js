@@ -5,7 +5,7 @@ import { v4 } from 'uuid'
 
 const purchasesData =
   [
-    { date: new Date('2023-07-23'), title: 'Refrigerator', sum: '798', id: v4() },
+    { date: new Date('2023-08-23'), title: 'Refrigerator', sum: '798', id: v4() },
     { date: new Date('2023-08-23'),title: 'Smartphone',sum: '780',id: v4()},
     {date: new Date('2025-03-21'),title: 'Bookcase',sum: '480',id: v4()}
   ]

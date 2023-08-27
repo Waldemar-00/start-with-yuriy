@@ -2,16 +2,17 @@ import './DiagramBar.css'
 function DiagramBar(
   {
     expense,
-    label,
-    maxValue,
+    month,
+    maxExpense,
   }) {
-  const height = maxValue > 0 ? `${expense / maxValue * 100}%` : '0%'
+  const height = maxExpense > 0 ? `${expense / maxExpense * 100}%` : '0%'
+  console.log(maxExpense)
   return(
     <div className={'diagram-bar'}>
       <div className={'diagram-bar__inner'}>
         <div className={'diagram-bar__fill'} style={{height: height}}></div>
       </div>
-      <div className={'diagram-bar__label'}>{label}</div>
+      <div className={'diagram-bar__label'}>{month}</div>
     </div>
   )
 }

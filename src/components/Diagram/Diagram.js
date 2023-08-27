@@ -9,8 +9,8 @@ function Diagram({ arrayOfBar }) {
         arrayOfBar.map(bar =>
           <DiagramBar
             expense={bar.expense}
-            label={bar.label}
-            maxValue={maxExpense}
+            month={bar.month}
+            maxExpense={maxExpense}
             key={v4()}
           />
         )
