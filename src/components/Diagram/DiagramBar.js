@@ -6,7 +6,6 @@ function DiagramBar(
     maxExpense,
   }) {
   const height = maxExpense > 0 ? `${expense / maxExpense * 100}%` : '0%'
-  console.log(maxExpense)
   return(
     <div className={'diagram-bar'}>
       <div className={'diagram-bar__inner'}>

@@ -14,17 +14,15 @@ function CostDiagram({ filterByYear }) {
     { expense: 0, month: 'Nov' },
     { expense: 0, month: 'Dec' },
   ]
-  for (let yearObj = 0; yearObj < filterByYear.length; yearObj++) {
-    const monthIndex = filterByYear[yearObj].date.getMonth()
-    for (let both = yearObj + 1; both < filterByYear.length; both++) {
-      if (filterByYear[both].date.getMonth() === monthIndex) {
-        arrayOfBar[monthIndex].expense = +filterByYear[both].sum + +filterByYear[yearObj].sum
-      } else {
-        arrayOfBar[monthIndex].expense = filterByYear[both].sum
+  for (let i = 0; i < filterByYear.length; i++) {
+    const monthIndex = filterByYear[i].date.getMonth()
+    if (filterByYear[i + 1] === undefined) arrayOfBar[monthIndex].expense = +filterByYear[i].sum
+    for (let j = i + 1; j < filterByYear.length; j++) {
+      monthIndex === filterByYear[j].date.getMonth() ?
+        arrayOfBar[monthIndex].expense = +filterByYear[j].sum + +filterByYear[i].sum :
+          arrayOfBar[monthIndex].expense = +filterByYear[i].sum
       }
-    }
   }
-  console.log(arrayOfBar)
   return (
     <Diagram arrayOfBar={arrayOfBar}/>
   )
